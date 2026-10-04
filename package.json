@@ -1,0 +1,50 @@
+{
+    "name": "code-pet",
+    "displayName": "Code Pet",
+    "description": "A small coding comapnion that lives in the vs code sidebar that reacts to yous coding activity.",
+    "version": "0.1.0",
+    "publisher": "",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "engines": {
+        "vscode": "^1.105.0"
+    },
+    "categories": ["Other"],
+    "activationEvents": ["onStartupFinished"],
+    "main": "./out/extension.js",
+    "contributes": {
+        "viewsContainers": {
+            "activitybar": [
+                {
+                "id": "codePet",
+                "title": "Code Pet",
+                "icon": "media/icon.svg"
+                }
+            ]
+        }
+    },
+    "views": {
+        "codePet": [
+            {
+                "type": "webview",
+                "id": "codePet.petView",
+                "name": "Pet"
+            }
+        ]
+    },
+    "commands": [
+        {
+            "commands": "codePet.show",
+            "title": "Show Pet",
+            "category": "Code Pet"
+        },
+        {
+            "command": "codePet.reset",
+            "title": ""
+        },
+        {}
+    ]
+}
